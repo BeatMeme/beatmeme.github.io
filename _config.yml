@@ -1,0 +1,19 @@
+title: Beat Meme Token
+description: Meme mania on Arthera - free gas, unstoppable hype
+baseurl: ""
+url: "https://beat.community"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+header_pages:
+  - index.html
+  - tokenomics.html
+  - tutorial.html
+
+sass:
+  sass_dir: _sass
+  style: compressed

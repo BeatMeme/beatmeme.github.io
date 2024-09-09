@@ -1,0 +1,121 @@
+---
+layout: default
+title: Tutorial
+description: Learn how to get, store, and trade $BEAT on Sonic L1.
+permalink: /tutorial/
+---
+
+<!-- Page Container -->
+<div class="tutorial-page">
+
+  <!-- Page Title -->
+  <h1 class="section-title">How to Get and Trade $BEAT</h1>
+  <p class="section-subtitle">Want in on this meme mania? Follow these steps to jump right in:</p>
+
+  <!-- Step 1 -->
+  <div class="tutorial-step">
+    <div class="step-icon">
+      <i class="fa-solid fa-wallet"></i>
+    </div>
+    <div class="step-content">
+      <h2>1. Prepare Your Wallet</h2>
+      <p>You can use MetaMask, Trust Wallet, or any Web3-compatible wallet. Make sure you have added 
+      <strong>Sonic</strong> as a custom network.</p>
+
+      <div class="network-box">
+        <h3>Sonic Network Settings</h3>
+        <ul>
+          <li><strong>Network Name:</strong> Sonic</li>
+          <li><strong>RPC URL:</strong> <a href="https://rpc.soniclabs.com" target="_blank">https://rpc.soniclabs.com</a></li>
+          <li><strong>Chain ID:</strong> 146 (0x92)</li>
+          <li><strong>Symbol:</strong> S</li>
+          <li><strong>Block Explorer:</strong> <a href="https://sonicscan.org/" target="_blank">https://sonicscan.org/</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="tutorial-step">
+    <div class="step-icon">
+      <i class="fa-solid fa-coins"></i>
+    </div>
+    <div class="step-content">
+      <h2>2. Add $BEAT to Your Wallet</h2>
+      <p><strong>Contract Address:</strong> 0x2ABcEA1E47A704BBE60fB45D4bBdE6817a492B81<br>
+      <strong>Symbol:</strong> BEAT<br>
+      <strong>Decimals:</strong> 18</p>
+      <p>Or click the button below if your wallet supports auto-adding:</p>
+      <button onclick="addBeatToken()" class="btn">Add $BEAT to Wallet</button>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="tutorial-step alt-bg">
+    <div class="step-icon">
+      <i class="fa-solid fa-exchange-alt"></i>
+    </div>
+    <div class="step-content">
+      <h2>3. Acquire $BEAT</h2>
+      <h3>Airdrops or Giveaways</h3>
+      <p>Stay tuned to our <a href="https://t.me/BeatTokenCommunity" target="_blank">Telegram</a> or 
+      <a href="https://x.com/BeatCryptoToken" target="_blank">X</a> for surprise airdrops.</p>
+
+      <h3>Buy on a DEX</h3>
+      <p>$BEAT is listed on several DEX on Sonic, just swap any supported token (S, USDC, etc.) for $BEAT.</p>
+      <ul>
+        <li><a href="https://spooky.fi/#/swap?inputCurrency=ETH&outputCurrency=0x2abcea1e47a704bbe60fb45d4bbde6817a492b81">Buy on SpookySwap</a></li>
+      </ul>
+      <p>Remember to increase the slippage to at least 5%!</p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="tutorial-step">
+    <div class="step-icon">
+      <i class="fa-solid fa-users"></i>
+    </div>
+    <div class="step-content">
+      <h2>4. Join the Community</h2>
+      <p>Memes, giveaways, and chaotic fun. Hop in:</p>
+      <ul>
+        <li><a href="https://t.me/BeatTokenCommunity" target="_blank">Telegram Group</a></li>
+        <li><a href="https://x.com/BeatCryptoToken" target="_blank">X (Twitter)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="tutorial-step alt-bg">
+    <div class="step-icon">
+      <i class="fa-solid fa-chart-line"></i>
+    </div>
+    <div class="step-content">
+      <h2>5. Watch Your $BEAT Evolve</h2>
+      <p>It is a meme token—who knows what will happen. Keep up with the community 
+      and watch the mania unfold.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+async function addBeatToken() {
+  try {
+    await window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: '0x2ABcEA1E47A704BBE60fB45D4bBdE6817a492B81',
+          symbol: 'BEAT',
+          decimals: 18
+        },
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    alert('Failed to add token. Please add manually.');
+  }
+}
+</script>

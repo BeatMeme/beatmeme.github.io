@@ -1,0 +1,379 @@
+/* 
+  Brighter, Meme-like Theme
+  Using neon gradients, bolder text, and some animations.
+*/
+
+$primary-color: #FF1493;       /* Hot Pink */
+$secondary-color: #00CED1;     /* Turquoise */
+$accent-color: #FFA500;        /* Orange for added pop */
+$background-color: #101010;    /* Dark for contrast */
+$text-color: #FFFFFF;
+
+/* Additional gradient for flair */
+$hero-gradient: radial-gradient(circle at top, $primary-color, $secondary-color);
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1600px;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 1rem;
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: $hero-gradient;
+  position: relative;
+  overflow: hidden;
+  
+  .hero-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }
+  .hero-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  .hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  .hero-btn {
+    background-color: $accent-color;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(255,165,0,0.5);
+    }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+}
+
+/* Meme Callout */
+.meme-callout {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  .meme-heading {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .meme-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.description {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  .feature {
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    p {
+      line-height: 1.4;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Tokenomics Teaser */
+.tokenomics-teaser {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3rem 2rem;
+  text-align: center;
+  h2 {
+    color: $secondary-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .tokenomics-details {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    p {
+      margin: 0.5rem 0;
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+  .tokenomics-btn {
+    background-color: $primary-color;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(255,20,147,0.5);
+    }
+  }
+}
+
+main {
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+  color: #ccc;
+  p {
+    max-width: 800px;
+    margin: 0.5rem auto;
+    line-height: 1.5;
+  }
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: $text-color;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* GENERAL LAYOUT ELEMENTS */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $primary-color;
+}
+  
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: rgba($text-color, 0.8);
+}
+  
+/* TUTORIAL PAGE */
+.tutorial-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+  
+.tutorial-step {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  
+  /* Switch to column on mobile */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  &.alt-bg {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .step-icon {
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+  
+    @media (max-width: 768px) {
+      margin: 0 0 1rem 0;
+      justify-content: center;
+    }
+  }
+  
+  .step-content {
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: $primary-color;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin: 1rem 0 0.5rem;
+      color: $secondary-color;
+      font-size: 1.2rem;
+    }
+  
+    .network-box {
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      ul {
+        margin: 0;
+        padding: 0 0 0 1.2rem;
+      }
+      li {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+}
+  
+/* TOKENOMICS PAGE */
+.tokenomics-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+  
+.card-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+  
+.card-box.alt-bg {
+  background-color: rgba(255,255,255,0.1);
+}
+  
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: $primary-color;
+}
+  
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+  
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 0.5rem;
+      color: $secondary-color;
+      font-size: 1.2rem;
+    }
+  }
+}
+  
+  .distribution-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+  li {
+    margin: 0.3rem 0;
+  }
+}
+  
