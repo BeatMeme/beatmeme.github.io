@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Beat Experimental MemeToken</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Beat is an experimental community token on the Arthera blockchain, exploring automatic distribution to NFT holders.{% endif %}">
+    <meta name="keywords" content="Beat, memetoken, cryptocurrency, Arthera, blockchain, NFT, experimental token">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }} - Beat Experimental MemeToken">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Beat is an experimental community token on the Arthera blockchain, exploring automatic distribution to NFT holders.{% endif %}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/beat-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ page.title }} - Beat Experimental MemeToken">
+    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Beat is an experimental community token on the Arthera blockchain, exploring automatic distribution to NFT holders.{% endif %}">
+    <meta property="twitter:image" content="{{ site.url }}/assets/images/beat-logo.png">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/tokenomics/' | relative_url }}">Tokenomics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>$BEAT is an experimental community token with no intrinsic value or expectation of financial return.</p>
+        <p>There is no formal team or roadmap.</p>
+        <div class="social-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <i class="fab fa-twitter" aria-label="Twitter"></i>
+            </a>
+            <a href="https://t.me/BeatMeme" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <i class="fab fa-telegram" aria-label="Telegram"></i>
+            </a>
+            <a href="https://github.com/BeatMeme" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <i class="fab fa-github" aria-label="GitHub"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Beat Experimental Meme Token",
+          "description": "Beat is an experimental community token on the Arthera blockchain, exploring automatic distribution to NFT holders.",
+          "url": "{{ site.url }}",
+          "logo": "{{ site.url }}/assets/images/beat-logo.png",
+          "sameAs": [
+            "https://t.me/BeatTokenCommunity",
+            "https://github.com/BeatMeme"
+          ]
+        }
+    </script>
+</body>
+</html>
