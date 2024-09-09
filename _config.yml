@@ -1,0 +1,18 @@
+title: Beat Experimental Meme Token
+description: Feel the rhythm, own the Beat!
+baseurl: ""
+url: "https://beat.community"
+
+# Build settings
+markdown: kramdown
+theme: minima # Use theme instead of remote_theme
+plugins:
+  - jekyll-feed
+
+header_pages:
+  - index.html
+  - tokenomics.md
+
+sass:
+  sass_dir: _sass
+  style: compressed

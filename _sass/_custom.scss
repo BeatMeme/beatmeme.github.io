@@ -1,0 +1,176 @@
+$primary-color: #FF1493;
+$secondary-color: #00CED1;
+$background-color: #1A1A1A;
+$text-color: #FFFFFF;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                color: $text-color;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+.description {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+
+    .feature {
+        text-align: center;
+        max-width: 300px;
+        margin-bottom: 2rem;
+
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: $primary-color;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.tokenomics {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h2 {
+        color: $primary-color;
+        margin-bottom: 2rem;
+    }
+
+    .tokenomics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .tokenomics-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        h3 {
+            color: $secondary-color;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+
+    p {
+        max-width: 600px;
+        margin: 0 auto 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tokenomics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: $text-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
